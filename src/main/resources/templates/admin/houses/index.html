@@ -77,7 +77,7 @@
 								<nav aria-label="民宿一覧ページ">
 									<ul class="pagination">
 										<li class="page-item">
-											<span th:if="${housePage.isFirst()}" class"page-link disabled">前</span>
+											<span th:if="${housePage.isFirst()}" class="page-link disabled">前</span>
 											<a th:unless="${housePage.isFirst()}" th:href="@{/admin/houses(page=${housePage.getNumber()-1},keyword=${keyword})}"class="page-link samuraitravel-page-link">前</a>
 										</li>
 										<li th:each="i:${#numbers.sequence(0,housePage.getTotalPages()-1)}"class="page-item">

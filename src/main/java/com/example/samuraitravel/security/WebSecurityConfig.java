@@ -15,7 +15,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class WebSecurityConfig {
 
 	@Bean
-	 SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+	 public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 		http
 		.authorizeHttpRequests((requests)->requests
 				.requestMatchers("/css/**", "/images/**", "/js/**", "/storage/**", "/", "/signup/**", "/houses", "/houses/{id}", "/stripe/webhook").permitAll()

@@ -11,20 +11,21 @@
          <div class="samuraitravel-wrapper">
 			 <div th:replace="~{fragment::header}"></div>
 			 
-			 <main>
-				 <div class="container pt-4 pb-5 samuraitravel-container">
-					 <div th:if="${param.loggedIn}" class="alert alert-info">
-						 ログインしました。
-					 </div>
-					 
-					 <div th:if="${param.loggedOut}" class="alert alert-info">
-						ログアウトしました。
-					 </div>
-					 
-					 <div th:if="${successMessage}" class="alert alert-info">
-						 <span th:text="${successMessage}"></span>
-					 </div>
-					   <div class="d-flex justify-content-center">                                            
+			           <main>
+                <div class="container pt-4 pb-5 samuraitravel-container">
+                    <div th:if="${param.loggedIn}" class="alert alert-info">
+                        ログインしました。
+                    </div>  
+                    
+                    <div th:if="${param.loggedOut}" class="alert alert-info">
+                        ログアウトしました。
+                    </div>
+                    
+                    <div th:if="${successMessage}" class="alert alert-info">
+                        <span th:text="${successMessage}"></span>
+                    </div> 
+                    
+                     <div class="d-flex justify-content-center">                                            
                          <form method="get" th:action="@{/houses}" class="mb-5 samuraitravel-search-form">
                              <div class="input-group">
                                  <input type="text" class="form-control" name="keyword" th:value="${keyword}" placeholder="民宿名・目的地">
@@ -171,13 +172,14 @@
                                  </tbody>
                              </table>  
                          </div>
-                     </div>                      
-				 </div>
-				 </div>
-			 </main>
-			 <div th:replace="~{fragment::footer}"></div>
-		 </div>
-		 
-		 <div th:replace="~{fragment::scripts}"></div>
-              </body>
- </html>
+                     </div>                               
+                </div>
+            </main>
+            
+            <!-- フッター -->
+            <div th:replace="~{fragment :: footer}"></div>
+        </div>    
+        
+        <div th:replace="~{fragment :: scripts}"></div>  
+  </body>
+</html>
